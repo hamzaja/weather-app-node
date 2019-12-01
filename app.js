@@ -12,12 +12,45 @@ const request = require('request')
 // })
 
 
-const add  = (a, b, callBack) => {
-  setTimeout(()=>{
-    callBack(a+b)
-  }, 2000)
+// const add  = (a, b, callBack) => {
+//   setTimeout(()=>{
+//     callBack(a+b)
+//   }, 2000)
+// }
+//
+// add(1,4,(sum)=>{
+//   console.log(sum)
+// })
+
+const geoCode = (address, callBack) => {
+
 }
 
-add(1,4,(sum)=>{
-  console.log(sum)
+geoCode('Phili',(error))
+
+
+
+
+
+
+
+
+
+const geocode = require('./utils/geocode')
+const forecast = require('./utils/forecast')
+
+geocode('Boston', (error, data) => {
+    console.log('Error', error)
+    console.log('Data', data)
 })
+
+forecast(-75.7088, 44.1545, (error, data) => {
+    console.log('Error', error)
+    console.log('Data', data)
+})
+
+
+
+
+
+c
